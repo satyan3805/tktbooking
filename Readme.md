@@ -1,4 +1,4 @@
-icket booking
+Ticket booking
 
 
 1. system should display/ maintain Screens info area (country, state, city, area) wise.
