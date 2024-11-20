@@ -29,3 +29,14 @@ User:  public users:
 8. user shoud be able to select payment methods and complete the txn.
 9. user should be able to recieve tkt booking confirmation via email.
 10. user should be able to cancel the tkt.
+
+database :
+
+1. user-----(user_id, name, phno, email, address, created_by,create_date,modified_by,modified_date)
+3. Screens--(screen_id, screen name, location, city, state, country, seating capacity,created_by,create_date,modified_by,modified_date)
+4. movie----(movie_id,movie_title, duration,rating,release_date,audio_language,created_by,create_date,modified_by,modified_date)
+5. showtime-(showtime_id,created_by,create_date,modified_by,modified_date)
+6. seats----(,created_by,create_date,modified_by,modified_date)
+7. payments-(,created_by,create_date,modified_by,modified_date)
+8. txn------(,created_by,create_date,modified_by,modified_date)
+9. bookings-(,created_by,create_date,modified_by,modified_date)
