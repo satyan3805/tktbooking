@@ -19,10 +19,15 @@ User: application admin:
 
 User:  public users:
 0. user should be able to self register/ create an account.(name, phno, email, address)
+-->create a java code that takes User object as iinput and store in DB
 1. user must authenticate with username and password to do any designated tasks.
-2. user should be able to reset password.
+-->create a java code that takes user_name and password as iinput and return success/fail
+2. user should be able to reset password/change password.
+-->
 3. user can search Screens
+-->
 4. user can search movies
+
 5. user can select movie/ screen then select show times.
 6. user should be able to see seating arrangement and availability.
 7. user should be able to select available seats for booking and see the total price for booking.
@@ -36,7 +41,7 @@ movie_zoner
 
 database :
 
-1. user-----(user_id, name, phno, email, address, created_by,create_date,modified_by,modified_date)
+1. user-----(user_id,user_name, password, name, phno, email, address, created_by,create_date,modified_by,modified_date)
 3. Screens--(screen_id, screen name, location, city, state, country, seating capacity,created_by,create_date,modified_by,modified_date)
 4. movie----(movie_id,movie_title, duration,rating,release_date,audio_language,created_by,create_date,modified_by,modified_date)
 5. showtime-(show_time_id, screen_id, show_time, is_active, current_movie_id,created_by,create_date,modified_by,modified_date)
@@ -106,3 +111,5 @@ show_time_id	screen_id	show_time	is_active 	current_movie_id
 11. classification of seats and prices.
 12. tkt confirmation after tkt booking.
 13. movie format.
+
+
