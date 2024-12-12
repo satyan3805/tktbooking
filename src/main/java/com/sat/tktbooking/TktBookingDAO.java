@@ -17,7 +17,7 @@ public class TktBookingDAO {
 		this.c = c;
 	}
 
-	void userRegister(User user) {
+	void userRegister(UserEntity user) {
 		String query = "insert into users (name, phno, email, address, user_name, password) values (?, ?, ?, ?, ?, ?)";
 
 		try {
@@ -44,8 +44,8 @@ public class TktBookingDAO {
 
 	boolean login = false;
 
-	User authenticate() {
-		User loggedInUser = null;
+	UserEntity authenticate() {
+		UserEntity loggedInUser = null;
 		System.out.print("Enter username: ");
 		String username = input.nextLine();
 		System.out.print("Enter password: ");
@@ -61,7 +61,7 @@ public class TktBookingDAO {
 			ResultSet rs = ps.executeQuery();
 
 			if (rs.next()) {
-				loggedInUser = new User();
+				loggedInUser = new UserEntity();
 //                System.out.println("Login Successful");
 				rs.getString("");
 				login = true;

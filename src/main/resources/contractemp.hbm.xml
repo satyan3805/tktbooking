@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 5.3//EN"  
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.sat.test.hbm.ContractEmployee" table="contract_emp">
+		<id name="empId">
+			<generator class="increment"></generator>
+		</id>
+
+		<property name="hourlyPay"></property>
+		<property name="contractDuration"></property>	
+	</class>
+	
+</hibernate-mapping> 

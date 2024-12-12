@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 5.3//EN"  
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.sat.test.hbm.Employee" table="test_emp">
+		<id name="empId" column="emp_id">
+			<generator class="increment"></generator>
+		</id>
+		  
+		
+		<property name="empName" column="emp_name"></property>
+		<property name="empDOB" column="emp_dob"></property>
+		<property name="empDOJ" column="emp_doj"></property>	
+		
+		<joined-subclass name="com.sat.test.hbm.RegularEmployee" table="test_reg_emp">  
+			<key column="empId"></key>
+			<property name="salary" column="salary"></property>  
+			<property name="bonus" column="bonus"></property>  
+			
+		</joined-subclass >  
+		
+		<joined-subclass  name="com.sat.test.hbm.ContractEmployee" table="test_contract_emp">  
+			<key column="empId"></key>
+			<property name="hourlyPay" column="hourly_pay"></property>  
+			<property name="contractDuration" column="contract_duration"></property>  
+		</joined-subclass > 
+		
+		<!-- for concrete class tables 
+		<union-subclass name="com.sat.test.hbm.RegularEmployee" table="test_reg_emp">  
+			<property name="salary"></property>  
+			<property name="bonus"></property>  
+			
+		</union-subclass >  
+		
+		<union-subclass  name="com.sat.test.hbm.ContractEmployee" table="test_contract_emp">  
+			<property name="hourlyPay"></property>  
+			<property name="contractDuration"></property>  
+		</union-subclass > 
+		-->
+		
+		
+		<!-- for Table per Hierarchy
+		<discriminator column="emp_type" type="string"></discriminator>
+		<subclass name="com.sat.test.hbm.RegularEmployee" discriminator-value="R">  
+			<property name="salary"></property>  
+			<property name="bonus"></property>  
+			
+		</subclass>  
+		
+		<subclass name="com.sat.test.hbm.ContractEmployee" discriminator-value="C">  
+			<property name="hourlyPay"></property>  
+			<property name="contractDuration"></property>  
+		</subclass>  
+		 -->	
+	</class>
+	
+</hibernate-mapping> 
